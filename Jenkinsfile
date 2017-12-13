@@ -1,11 +1,17 @@
 pipeline {
     agent { docker 'maven:3.3.3' }
+    
+    environment {
+        MASTER_KEY='c7d51fc4-e032-11e7-80c1-9a214cf093ae'
+        SLAVE_KEY='no remorse!'
+    }
+    
     stages {
         stage('build') {
             steps {
                 sh 'mvn --version'
                 sh 'echo Hello, World!'
-                sh 'echo Make a change at 2017-12-11 12:10:11 and look how long it will take Jenkins to rebuild.'
+                sh 'echo $MASTER_KEY - $SLAVE_KEY ++-'
             }
         }
     }
