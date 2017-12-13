@@ -19,6 +19,19 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/**/*.xml'
+            echo 'One way or the other, the build was finished.'
+        }
+        success {
+            echo 'The build was successful!'
+        }
+        unstable {
+            echo 'Some unit tests might have failed, or some other reason why the build was classified unstable'
+        }
+        failure {
+            echo 'The build has failed.'
+        }
+        changed {
+            echo 'Things were different before ... either changed to the better, or to the worse.'
         }
     }
 }
