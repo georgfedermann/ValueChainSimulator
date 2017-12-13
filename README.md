@@ -1,7 +1,7 @@
 # ValueChainSimulator
 This is a simulator that helps understand the impact of various KPIs on the throughput of a value chain.
 
-This project is inspired by the games as described in Eliyahu Goldratt's book *The Goal*.
+This project is inspired by the match stick game as described in Eliyahu Goldratt's book *The Goal*.
 The simulator will start out in a pretty simple fashion to allow early results and gaining of a first understanding.
 Later on, the requirements might get refined or extended when a better understanding for the theory of constraints
 has been achieved.
@@ -14,6 +14,13 @@ first work center will recieve raw material or products delivered by a supplier.
 its products to customers or a kind of warehouse.
 
 ## System Description
+
+A value chain consists of several work centers.  
+Work gets released to a value chain.  
+Work gets processed inside the value chain.  
+While work is in the value chain, it is work in process.  
+Work leaving the value chain adds to throughput.  
+Work inside the value chain adds to inventory.  
 
 The simulator does not simulate the interfaces to the supplier at the start of the value chain or to the 
 customer at the end of the value chain.
