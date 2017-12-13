@@ -24,7 +24,7 @@ pipeline {
         success {
             echo 'The build was successful!'
             mail to: 'georg.federmann@gmail.com', subject: "Build was successful: ${currentBuild.fullDisplayName}",
-            body: "Everything is ok with ${env.BUILD_URL} - grin :->"
+            body: "Everything is ok with ${env.BUILD_URL} - grin :-> had to change something"
         }
         unstable {
             echo 'Some unit tests might have failed, or some other reason why the build was classified unstable'
