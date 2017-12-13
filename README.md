@@ -15,12 +15,19 @@ its products to customers or a kind of warehouse.
 
 ## System Description
 
-A value chain consists of several work centers.  
+There is work.  
 Work gets released to a value chain.  
 Work gets processed inside the value chain.  
+The smallest amount of work is a unit of work.  
+A value chain consists of several work centers where work gets processed.  
+Between each two work centers, and at the very beginning of the value chain, and at the very end of the value chain there is one shelf respectively to store work between two work centers.  
+While work is in a work center, it is being processed.  
+While work is on the shelf, it is waiting.  
 While work is in the value chain, it is work in process.  
 Work leaving the value chain adds to throughput.  
-Work inside the value chain adds to inventory.  
+
+A (simple) model of a value chain as supported by this early version of the simulator might look like this:  
+Released Work (Shelf) -> Work Center 1 -> Shelf -> Work Center 2 -> Shelf -> Work Center 3 -> processed work (Shelf)
 
 The simulator does not simulate the interfaces to the supplier at the start of the value chain or to the 
 customer at the end of the value chain.
