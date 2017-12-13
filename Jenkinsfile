@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'mvn clean package'
                 sh 'echo Hello, World!'
                 sh 'echo $MASTER_KEY - $SLAVE_KEY ++-'
             }
@@ -18,7 +18,7 @@ pipeline {
     
     post {
         always {
-            junit 'build/reports/**/*.xml'
+            junit 'target/surefire-reports/**/*.xml'
         }
     }
 }
