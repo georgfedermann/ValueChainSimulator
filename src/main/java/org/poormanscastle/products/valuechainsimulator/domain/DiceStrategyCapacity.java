@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * a given turn.
  * Created by georg on 14/12/2017.
  */
-class DiceCapacity implements WorkcenterCapacity {
+class DiceStrategyCapacity implements WorkcenterCapacity {
 
     /**
      * what is the number of faces of the die which this capacity
@@ -16,7 +16,7 @@ class DiceCapacity implements WorkcenterCapacity {
      */
     private final int numberOfFaces;
 
-    DiceCapacity(int numberOfFaces) {
+    DiceStrategyCapacity(int numberOfFaces) {
         this.numberOfFaces = numberOfFaces;
     }
 
