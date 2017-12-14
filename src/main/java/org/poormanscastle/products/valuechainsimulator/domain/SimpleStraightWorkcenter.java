@@ -9,10 +9,14 @@ class SimpleStraightWorkcenter implements Workcenter {
     
     private WorkcenterCapacity workcenterCapacity;
     
+    private String name;
+    
     private Shelf sourceShelf;
     private Shelf destinationShelf;
 
-    public SimpleStraightWorkcenter() {
+    public SimpleStraightWorkcenter(String name, WorkcenterCapacity workcenterCapacity) {
+        this.name = name;
+        this.workcenterCapacity = workcenterCapacity;
     }
 
     @Override

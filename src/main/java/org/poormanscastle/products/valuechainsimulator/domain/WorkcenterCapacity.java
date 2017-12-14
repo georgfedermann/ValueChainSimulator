@@ -10,4 +10,8 @@ public interface WorkcenterCapacity {
     
     int getCurrentCapacity();
     
+    static WorkcenterCapacity create6SidedDiceStrategyyCapacity(){
+        return new DiceCapacity(6);
+    }
+    
 }
