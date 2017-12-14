@@ -16,11 +16,20 @@ its products to customers or a kind of warehouse.
 ## System Description
 
 There is work.  
+Work has a type. Like match, car, wheel, etc.  
+Work has an uuid to distinguish multiple pieces of works of the same type.  
 Work gets released to a value chain.  
-Work gets processed inside the value chain.  
+Work gets processed in work centers inside the value chain.  
 The smallest amount of work is a unit of work.  
+A value chain has a name.  
+A value chain has a shelf to store released work.  
+A value chain has a shelf to store processed work.  
 A value chain consists of a series of one|zero or more work centers. 
 A work center is where work gets processed.  
+A work center has a name.  
+A work center has a capacity.  
+A work center is capable of processing an integer number of work per turn.  
+A capacity is more or less a strategy that defines how much work a work center can process at a given step.  
 It takes each work center a configurable time to perform its tasks.  
 Between each two work centers, and at the very beginning of the value chain, and at the very end of the value chain there is one shelf respectively to store work between two work centers.  
 While work is in a work center, it is being processed.  

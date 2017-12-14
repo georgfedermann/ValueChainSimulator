@@ -11,5 +11,12 @@ package org.poormanscastle.products.valuechainsimulator.domain;
  * Work leaving the value chain adds to throughput.
  * Created by georg on 13/12/2017.
  */
-public interface ValueChain {
+public interface Valuechain {
+    
+    void addWorkCenter(Workcenter workcenter);
+    
+    public static Valuechain createSimpleStraightValueChain(int numberOfWorkcenters){
+        return null;
+    }
+    
 }
