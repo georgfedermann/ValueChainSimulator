@@ -19,12 +19,15 @@ There is work.
 Work gets released to a value chain.  
 Work gets processed inside the value chain.  
 The smallest amount of work is a unit of work.  
-A value chain consists of several work centers where work gets processed.  
+A value chain consists of a series of one|zero or more work centers. 
+A work center is where work gets processed.  
+It takes each work center a configurable time to perform its tasks.  
 Between each two work centers, and at the very beginning of the value chain, and at the very end of the value chain there is one shelf respectively to store work between two work centers.  
 While work is in a work center, it is being processed.  
 While work is on the shelf, it is waiting.  
 While work is in the value chain, it is work in process.  
 Work leaving the value chain adds to throughput.  
+Work inside the value chain adds to inventory.  
 
 A (simple) model of a value chain as supported by this early version of the simulator might look like this:  
 Released Work (Shelf) -> Work Center 1 -> Shelf -> Work Center 2 -> Shelf -> Work Center 3 -> processed work (Shelf)
@@ -37,7 +40,6 @@ The simulator will only simulate one simple value chain consisting of a linear, 
 The value chain consists of 0 or more work centers. Each work center performs a step in creating the product
 of the value chain.
 
-It takes each work center a configurable time to perform its tasks.
 
 It can be configured if a given work center takes a constant time each time it performs its tasks or whether there
 is a random variation in the execution time.
@@ -48,16 +50,14 @@ A configurable amount of work is available at the start of the value chain.
 
 The simulator displays a measure of work in process.
 
-The simulator calculates the current cashflow, capital bound in inventory, revenue through sales, and production cost in form of labour cost. Thus, the price of the raw material and the price of the end product can be configured, as well as the wage / production cost of each work center. It will be interesting to see how quickly the organization behind the value chain will go broke.
+The simulator calculates the current cash flow, capital bound in inventory, revenue through sales, and production cost in form of labour cost. Thus, the price of the raw material and the price of the end product can be configured, as well as the wage / production cost of each work center. It will be interesting to see how quickly the organization behind the value chain will go broke.
 
 ## To be implemented later
-Instead of a configurable amount of work being available at the start of the value chain, work can be released
-manually to the value chain => In an attempt to optimize throughput.
+Instead of a configurable amount of work being available at the start of the value chain, work can be released manually to the value chain => In an attempt to optimize throughput.
 
 The sequence of work centers within the value chain can be altered.
 
-Multiple intersecting value chains can be configured to produce more complex products and simulate more complex
-value chains.
+Multiple intersecting value chains can be configured to produce more complex products and simulate more complex value chains.
 
 
 
