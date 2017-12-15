@@ -20,13 +20,16 @@ class SimpleStraightWorkcenter implements Workcenter {
     }
 
     @Override
-    public void setSourceShelf(Shelf sourceShelf) {
-        
+    public Shelf setSourceShelf(Shelf sourceShelf) {
+        this.sourceShelf = sourceShelf;
+        sourceShelf.setPullWorkcenter(this);
+        return sourceShelf;
     }
 
     @Override
-    public void setDestinationShelf(Shelf destinationShelf) {
+    public Shelf setDestinationShelf(Shelf destinationShelf) {
 
+        return destinationShelf;
     }
     
 }

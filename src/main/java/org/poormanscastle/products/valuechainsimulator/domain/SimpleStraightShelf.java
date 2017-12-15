@@ -10,6 +10,16 @@ public class SimpleStraightShelf implements Shelf {
 
     private final List<Work> waitingWork = new LinkedList<>();
 
+    /**
+     * the workcenter which pushes work to this shelf.
+     */
+    private Workcenter pushWorkcenter;
+
+    /**
+     * the workcenter which pulls work from this shelf.
+     */
+    private Workcenter pullWorkcenter;
+
     @Override
     public int getLoad() {
         return waitingWork.size();
@@ -32,5 +42,28 @@ public class SimpleStraightShelf implements Shelf {
     @Override
     public void push(Work work) {
         waitingWork.add(work);
+    }
+
+    @Override
+    public Workcenter setPushWorkcenter(Workcenter workcenter) {
+        this.pushWorkcenter = workcenter;
+        workcenter.setDestinationShelf(this);
+        return workcenter;
+    }
+
+    @Override
+    public Workcenter setPullWorkcenter(Workcenter workcenter) {
+        this.pullWorkcenter = workcenter;
+        return workcenter;
+    }
+
+    @Override
+    public Workcenter getPushWorkcenter() {
+        return pushWorkcenter;
+    }
+
+    @Override
+    public Workcenter getPullWorkcenter() {
+        return pullWorkcenter;
     }
 }

@@ -7,9 +7,9 @@ package org.poormanscastle.products.valuechainsimulator.domain;
  */
 public interface Workcenter {
 
-    void setSourceShelf(Shelf sourceShelf);
+    Shelf setSourceShelf(Shelf sourceShelf);
 
-    void setDestinationShelf(Shelf destinationShelf);
+    Shelf setDestinationShelf(Shelf destinationShelf);
     
     static Workcenter getSimpleDiceWorkCenter(String name){
         return new SimpleStraightWorkcenter(name, 

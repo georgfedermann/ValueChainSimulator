@@ -25,6 +25,14 @@ public interface Shelf {
     Work next();
 
     void push(Work work);
+    
+    Workcenter setPushWorkcenter(Workcenter workcenter);
+    
+    Workcenter setPullWorkcenter(Workcenter workcenter);
+    
+    Workcenter getPushWorkcenter();
+    
+    Workcenter getPullWorkcenter();
 
     public static Shelf getSimpleStraightShelf() {
         return new SimpleStraightShelf();
