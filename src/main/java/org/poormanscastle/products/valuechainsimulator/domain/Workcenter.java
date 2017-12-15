@@ -15,6 +15,10 @@ public interface Workcenter {
 
     Shelf getDestinationShelf();
 
+    String getName();
+
+    WorkcenterCapacity getWorkcenterCapacity();
+
     static Workcenter getSimpleDiceWorkCenter(String name) {
         return new SimpleStraightWorkcenter(name,
                 WorkcenterCapacity.create6SidedDiceStrategyyCapacity());

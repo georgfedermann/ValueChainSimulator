@@ -6,9 +6,14 @@ import java.util.List;
 /**
  * Created by georg on 14/12/2017.
  */
-public class SimpleStraightShelf implements Shelf {
+class SimpleStraightShelf implements Shelf {
 
     private final List<Work> waitingWork = new LinkedList<>();
+
+    /**
+     * make constructor non-public
+     */
+    SimpleStraightShelf(){}
 
     /**
      * the workcenter which pushes work to this shelf.
@@ -66,4 +71,14 @@ public class SimpleStraightShelf implements Shelf {
     public Workcenter getPullWorkcenter() {
         return pullWorkcenter;
     }
+
+    @Override
+    public String toString() {
+        return "SimpleStraightShelf{" +
+                "waitingWork=" + waitingWork +
+                ", pushWorkcenter=" + pushWorkcenter +
+                ", pullWorkcenter=" + pullWorkcenter +
+                '}';
+    }
+    
 }

@@ -14,7 +14,7 @@ class SimpleStraightWorkcenter implements Workcenter {
     private Shelf sourceShelf;
     private Shelf destinationShelf;
 
-    public SimpleStraightWorkcenter(String name, WorkcenterCapacity workcenterCapacity) {
+    SimpleStraightWorkcenter(String name, WorkcenterCapacity workcenterCapacity) {
         this.name = name;
         this.workcenterCapacity = workcenterCapacity;
     }
@@ -42,4 +42,24 @@ class SimpleStraightWorkcenter implements Workcenter {
         return destinationShelf;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public WorkcenterCapacity getWorkcenterCapacity() {
+        return workcenterCapacity;
+    }
+
+    @Override
+    public String toString() {
+        return "SimpleStraightWorkcenter{" +
+                "workcenterCapacity=" + workcenterCapacity +
+                ", name='" + name + '\'' +
+                ", sourceShelf=" + sourceShelf +
+                ", destinationShelf=" + destinationShelf +
+                '}';
+    }
+    
 }

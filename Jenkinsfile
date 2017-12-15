@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean javadoc:javadoc cobertura:cobertura package'
                 sh 'echo Hello, World!'
                 sh 'echo $MASTER_KEY - $SLAVE_KEY ++-'
             }

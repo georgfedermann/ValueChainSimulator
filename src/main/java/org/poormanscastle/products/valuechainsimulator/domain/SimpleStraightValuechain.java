@@ -11,6 +11,7 @@ class SimpleStraightValuechain implements Valuechain {
 
     private final Shelf processedWork;
 
+
     @Override
     public void addWorkCenter(Workcenter workcenter) {
 
@@ -20,4 +21,13 @@ class SimpleStraightValuechain implements Valuechain {
         this.releasedWork = releasedWork;
         this.processedWork = processedWork;
     }
+
+    @Override
+    public String toString() {
+        return "SimpleStraightValuechain{" +
+                "releasedWork=" + releasedWork +
+                ", processedWork=" + processedWork +
+                '}';
+    }
+    
 }
