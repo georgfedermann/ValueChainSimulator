@@ -24,4 +24,12 @@ class DiceStrategyCapacity implements WorkcenterCapacity {
     public int getCurrentCapacity() {
         return ThreadLocalRandom.current().nextInt(1, numberOfFaces + 1);
     }
+
+    @Override
+    public String toString() {
+        return "DiceStrategyCapacity{" +
+                "numberOfFaces=" + numberOfFaces +
+                '}';
+    }
+    
 }

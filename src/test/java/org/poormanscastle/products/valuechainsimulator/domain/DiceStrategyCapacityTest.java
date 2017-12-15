@@ -2,6 +2,8 @@ package org.poormanscastle.products.valuechainsimulator.domain;
 
 import static org.junit.Assert.assertTrue;
 
+import java.lang.reflect.Field;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -32,6 +34,19 @@ public class DiceStrategyCapacityTest {
         }
         logger.info(StringUtils.join("All buckets were filled after ", counter, " throws of the dice."));
 
+    }
+
+    @Test
+    public void toStringTest() throws Exception {
+        Field[] fields = DiceStrategyCapacity.class.getDeclaredFields();
+        String toString = WorkcenterCapacity.create6SidedDiceStrategyyCapacity().toString();
+        for (Field field : fields) {
+            if ("__cobertura_counters".equals(field.getName())) {
+                continue;
+            }
+            assertTrue(StringUtils.join("toString() is missing field ", field.getName()),
+                    toString.contains(field.getName()));
+        }
     }
 
 }

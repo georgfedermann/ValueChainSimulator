@@ -13,7 +13,8 @@ class SimpleStraightShelf implements Shelf {
     /**
      * make constructor non-public
      */
-    SimpleStraightShelf(){}
+    SimpleStraightShelf() {
+    }
 
     /**
      * the workcenter which pushes work to this shelf.

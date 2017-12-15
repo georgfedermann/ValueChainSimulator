@@ -32,4 +32,5 @@ class SimpleWork implements Work {
                 ", uuid='" + uuid + '\'' +
                 '}';
     }
+    
 }
