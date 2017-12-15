@@ -10,9 +10,13 @@ public interface Workcenter {
     Shelf setSourceShelf(Shelf sourceShelf);
 
     Shelf setDestinationShelf(Shelf destinationShelf);
-    
-    static Workcenter getSimpleDiceWorkCenter(String name){
-        return new SimpleStraightWorkcenter(name, 
+
+    Shelf getSourceShelf();
+
+    Shelf getDestinationShelf();
+
+    static Workcenter getSimpleDiceWorkCenter(String name) {
+        return new SimpleStraightWorkcenter(name,
                 WorkcenterCapacity.create6SidedDiceStrategyyCapacity());
     }
 

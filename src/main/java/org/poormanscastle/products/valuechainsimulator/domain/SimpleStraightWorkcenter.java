@@ -6,11 +6,11 @@ package org.poormanscastle.products.valuechainsimulator.domain;
  * Created by georg on 14/12/2017.
  */
 class SimpleStraightWorkcenter implements Workcenter {
-    
+
     private WorkcenterCapacity workcenterCapacity;
-    
+
     private String name;
-    
+
     private Shelf sourceShelf;
     private Shelf destinationShelf;
 
@@ -27,9 +27,19 @@ class SimpleStraightWorkcenter implements Workcenter {
     }
 
     @Override
-    public Shelf setDestinationShelf(Shelf destinationShelf) {
+    public Shelf getSourceShelf() {
+        return sourceShelf;
+    }
 
+    @Override
+    public Shelf getDestinationShelf() {
         return destinationShelf;
     }
-    
+
+    @Override
+    public Shelf setDestinationShelf(Shelf destinationShelf) {
+        this.destinationShelf = destinationShelf;
+        return destinationShelf;
+    }
+
 }
