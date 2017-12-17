@@ -12,11 +12,29 @@ package org.poormanscastle.products.valuechainsimulator.domain;
  * Created by georg on 13/12/2017.
  */
 public interface Valuechain {
-    
+
     void addWorkCenter(Workcenter workcenter);
-    
-    public static Valuechain createSimpleStraightValueChain(int numberOfWorkcenters){
+
+    /**
+     * 
+     * @return the shelf containing the released work of this value chain.
+     */
+    Shelf getReleasedWorkShelf();
+
+    /**
+     * 
+     * @return the Shelf containing the finished work of this value chain.
+     */
+    Shelf getFinishedWorkShelf();
+
+    /**
+     * 
+     * @return the number of work centers in this value chain.
+     */
+    int getLength();
+
+    public static Valuechain createSimpleStraightValueChain(int numberOfWorkcenters) {
         return null;
     }
-    
+
 }

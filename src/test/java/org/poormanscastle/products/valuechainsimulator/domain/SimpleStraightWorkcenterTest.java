@@ -36,8 +36,8 @@ public class SimpleStraightWorkcenterTest {
         // Released work shelf => Beautify work center => Finished work shelf
 
         Workcenter workcenter = Workcenter.getSimpleDiceWorkCenter("Beautify");
-        Shelf releasedWorkShelf = Shelf.getSimpleStraightShelf();
-        Shelf finishedWorkShelf = Shelf.getSimpleStraightShelf();
+        Shelf releasedWorkShelf = Shelf.createSimpleStraightShelf();
+        Shelf finishedWorkShelf = Shelf.createSimpleStraightShelf();
 
         finishedWorkShelf.setPushWorkcenter(workcenter);
         workcenter.setSourceShelf(releasedWorkShelf);

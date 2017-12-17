@@ -20,7 +20,7 @@ public class SimpleStraightShelfTest {
 
     @Test
     public void getLoadPushNextTest() throws Exception {
-        Shelf probe = Shelf.getSimpleStraightShelf();
+        Shelf probe = Shelf.createSimpleStraightShelf();
         assertNull(probe.next());
         List<Work> workList = new LinkedList<>();
         for (int c = 0; c < 10; c++) {
@@ -39,7 +39,7 @@ public class SimpleStraightShelfTest {
     @Test
     public void toStringTest() throws Exception {
         Field[] fields = SimpleStraightShelf.class.getDeclaredFields();
-        String toString = Shelf.getSimpleStraightShelf().toString();
+        String toString = Shelf.createSimpleStraightShelf().toString();
         for (Field field : fields) {
             if ("__cobertura_counters".equals(field.getName())) {
                 continue;
