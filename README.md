@@ -19,16 +19,18 @@ There is work.
 Work has a type. Like match, car, wheel, etc.  
 Work has an uuid to distinguish multiple pieces of works of the same type.  
 Work gets released to a value chain.  
-Work gets processed in work centers inside the value chain.  
+Work gets processed in work centers within the value chain.  
 The smallest amount of work is a unit of work.  
 A value chain has a name.  
 A value chain has a shelf to store released work.  
-A value chain has a shelf to store processed work.  
-A value chain consists of a series of one|zero or more work centers. 
+A value chain has a shelf to store finished work.  
+A value chain consists of a series of one|zero (?) or more work centers. 
 A work center is where work gets processed.  
 A work center has a name.  
 A work center has a capacity.  
-A work center is capable of processing an integer number of work per turn.  
+A turn represents a step in time in which a work center can process work. In a turn a work center will fetch a number of items according to its capacity from its source shelf, process it and hand it over to its destination shelf. This concept does not support procedures yet where a work center might take more than one turn to process work.  
+A value chain can be triggered to process a turn. There are two possible strategies how a value chain might process a turn: The value chain's work centers are triggered sequentially, so each work center gets a chance to process work processed by preceding work centers in the same turn. Or the other strategy: all work centers are triggered at the same time, thus each work center can only process work that was processed by the preceding work center in an earlier turn. Thus, a value chain has a strategy to process turns -> a turn strategy.
+A work center can be triggered to process a turn. A work center is capable of processing an integer number of work per turn.  
 A capacity is more or less a strategy that defines how much work a work center can process at a given step.  
 It takes each work center a configurable time to perform its tasks.  
 Between each two work centers, and at the very beginning of the value chain, and at the very end of the value chain there is one shelf respectively to store work between two work centers.  
