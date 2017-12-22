@@ -22,14 +22,19 @@ Work has an uuid to distinguish multiple pieces of works of the same type.
 Work gets released to a value chain.  
 Work gets processed in work centers within the value chain.  
 The smallest amount of work is a unit of work.  
+### Work center
+Each work center performs a step in creating the product of the value chain.  
+A work center is where work gets processed.  
+A work center has a name.  
+A work center has a capacity.  
+### Shelf
+A shelf is a place where work in process can be stored when it is not being processed in a work center. For a definition of work in compare "States of work" below.  
 ### Value chain
 A value chain has a name.  
 A value chain has a shelf to store released work.  
 A value chain has a shelf to store finished work.  
-A value chain consists of a series of one|zero (?) or more work centers. 
-A work center is where work gets processed.  
-A work center has a name.  
-A work center has a capacity.  
+A value chain consists of a series of one|zero (?) or more work centers.  
+Before and after each work center, there is a shelf to store work in process.
 ### Turn strategy
 A value chain has a turn strategy.
 A turn represents a step in time in which a work center can process work. In a turn a work center will fetch a number of items according to its capacity from its source shelf, process it and hand it over to its destination shelf. This concept does not support procedures yet where a work center might take more than one turn to process work.  
@@ -53,10 +58,6 @@ The simulator does not simulate the interfaces to the supplier at the start of t
 customer at the end of the value chain.
 
 The simulator will only simulate one simple value chain consisting of a linear, non-circular chain of work centers.
-
-The value chain consists of 0 or more work centers. Each work center performs a step in creating the product
-of the value chain.
-
 
 It can be configured if a given work center takes a constant time each time it performs its tasks or whether there
 is a random variation in the execution time.
